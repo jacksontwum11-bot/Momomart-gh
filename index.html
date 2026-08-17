@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MoMoMart GH</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#12221a;background:#f7faf8}header{height:72px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;background:#fff;border-bottom:1px solid #e7eee9;position:sticky;top:0;z-index:5}.brand{font-size:21px;font-weight:900}.brand span{display:inline-grid;place-items:center;background:#0b8f47;color:#fff;border-radius:9px;width:32px;height:32px;margin-right:7px}.brand b{color:#0b8f47}nav{display:flex;gap:25px}nav a{color:#516057;text-decoration:none;font-weight:700;font-size:14px}.cart{border:0;background:#12221a;color:#fff;padding:11px 15px;border-radius:9px;font-weight:800}.cart i{font-style:normal;background:#0b8f47;border-radius:50%;padding:2px 7px}.hero{padding:65px 8%;display:grid;grid-template-columns:1.2fr .8fr;gap:55px;align-items:center;background:linear-gradient(135deg,#eaf9ef,#f7fff9)}.pill{display:inline-block;background:#d9f7e4;color:#08783b;padding:8px 12px;border-radius:30px;font-size:11px;font-weight:900;letter-spacing:1px}h1{font-size:60px;line-height:1;margin:18px 0}h1 em{color:#0b8f47;font-style:normal}.hero p{font-size:18px;line-height:1.6;color:#5d6a63}.btn{display:inline-block;background:#0b8f47;color:#fff;border:0;border-radius:10px;padding:14px 20px;font-weight:900;cursor:pointer}.card{background:#12221a;color:#fff;border-radius:28px;padding:28px}.small{background:#20372b;padding:15px;border-radius:12px;margin-top:10px;display:flex;justify-content:space-between}.section{padding:70px 8%}.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:25px}.head small,.how small,.support small{color:#0b8f47;font-weight:900;letter-spacing:1.5px}.head h2,.how h2,.support h2{font-size:38px;margin:7px 0}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product{background:#fff;border:1px solid #e0e9e3;border-radius:17px;padding:22px;position:relative}.best{position:absolute;right:12px;top:12px;background:#dff8e8;color:#08783b;padding:6px 8px;border-radius:20px;font-size:9px;font-weight:900}.icon{width:55px;height:55px;border-radius:14px;background:#eef8f1;display:grid;place-items:center;font-size:27px}.product h3{font-size:24px;margin:16px 0 5px}.product p{color:#68746d;height:42px;font-size:14px}.price{font-size:24px;font-weight:900;display:block;margin:17px 0}.product button{width:100%;padding:12px;border:0;border-radius:9px;background:#12221a;color:#fff;font-weight:800}.how{background:#12221a;color:#fff}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{background:#1d3327;padding:25px;border-radius:15px}.step b{color:#7de5a5}.support{padding:55px 8%;display:flex;justify-content:space-between;align-items:center}footer{background:#0b1711;color:#aebdb4;padding:25px;text-align:center;font-size:13px}.overlay{display:none;position:fixed;inset:0;background:#0008;z-index:20}.drawer{width:min(480px,100%);height:100%;margin-left:auto;background:#fff;padding:30px;overflow:auto}.x{float:right;font-size:28px;border:0;background:none}.drawer input,.drawer select{width:100%;padding:13px;border:1px solid #d4dfd8;border-radius:8px;margin:6px 0 14px}.item{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #e8eee9}.full{width:100%}#msg{line-height:1.5;color:#08783b}@media(max-width:800px){nav{display:none}.hero{grid-template-columns:1fr;padding:50px 6%}h1{font-size:46px}.products{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}.head,.support{flex-direction:column;align-items:flex-start;gap:15px}}@media(max-width:480px){.products{grid-template-columns:1fr}h1{font-size:40px}}
+</style>
+</head>
+<body>
+<header><div class="brand"><span>₵</span>MoMoMart <b>GH</b></div><nav><a href="#products">Bundles</a><a href="#how">How it works</a><a href="#support">Support</a></nav><button class="cart" onclick="openCart()">Cart <i id="count">0</i></button></header>
+<section class="hero"><div><div class="pill">⚡ FAST DIGITAL DELIVERY</div><h1>Data bundles.<br><em>Simple. Fast.</em></h1><p>Choose a bundle, enter the recipient's number, and pay securely with Mobile Money.</p><a class="btn" href="#products">Shop bundles ↓</a></div><div class="card"><h3>MoMoMart GH</h3><p style="color:#b5c8bb">Secure checkout with supported Ghana payment methods.</p><div class="small"><span>📶 10 GB</span><b>₵45</b></div><div class="small"><span>📶 20 GB</span><b>₵80</b></div></div></section>
+<section id="products" class="section"><div class="head"><div><small>POPULAR BUNDLES</small><h2>Pick your package</h2></div><label>Network <select id="network"><option value="mtn">MTN</option><option value="vod">Telecel</option><option value="atl">AirtelTigo</option></select></label></div>
+<div class="products">
+<article class="product"><div class="icon">📶</div><h3>3 GB</h3><p>Great for everyday browsing.</p><span class="price">₵20</span><button onclick="add('3 GB',20)">Add to cart</button></article>
+<article class="product"><span class="best">BEST VALUE</span><div class="icon">🔥</div><h3>10 GB</h3><p>Perfect for regular streaming.</p><span class="price">₵45</span><button onclick="add('10 GB',45)">Add to cart</button></article>
+<article class="product"><div class="icon">🚀</div><h3>20 GB</h3><p>For heavy internet users.</p><span class="price">₵80</span><button onclick="add('20 GB',80)">Add to cart</button></article>
+<article class="product"><div class="icon">💎</div><h3>50 GB</h3><p>Big bundle for serious usage.</p><span class="price">₵170</span><button onclick="add('50 GB',170)">Add to cart</button></article>
+</div></section>
+<section id="how" class="section how"><small>HOW IT WORKS</small><h2>Three easy steps</h2><div class="steps"><div class="step"><b>01</b><h3>Choose</h3><p>Select your network and bundle.</p></div><div class="step"><b>02</b><h3>Enter details</h3><p>Enter your name, email and recipient phone number.</p></div><div class="step"><b>03</b><h3>Pay</h3><p>Continue to secure Paystack checkout and authorize the MoMo payment.</p></div></div></section>
+<section id="support" class="support"><div><small>NEED HELP?</small><h2>We're here for you.</h2><p>Replace this text with your real support contact.</p></div></section><footer>© 2026 MoMoMart GH · Legitimate digital commerce only</footer>
+<div class="overlay" id="overlay"><div class="drawer"><button class="x" onclick="closeCart()">×</button><h2>Your order</h2><div id="items"></div><h3>Total: ₵<span id="total">0</span></h3><label>Email<input id="email" type="email" placeholder="customer@example.com" required></label><label>Recipient phone<input id="phone" placeholder="0241234567" required></label><label>Network<select id="payNetwork"><option value="mtn">MTN</option><option value="vod">Telecel</option><option value="atl">AirtelTigo</option></select></label><button class="btn full" onclick="pay()">Continue to MoMo payment</button><p id="msg"></p></div></div>
+<script>
+let cart=[];
+function add(name,price){cart.push({name,price});openCart();render()}
+function render(){document.getElementById('count').textContent=cart.length;document.getElementById('items').innerHTML=cart.length?cart.map((x,i)=>'<div class="item"><span>'+x.name+'</span><b>₵'+x.price+' <button onclick="removeItem('+i+')">×</button></b></div>').join(''):'<p>Your cart is empty.</p>';document.getElementById('total').textContent=cart.reduce((a,x)=>a+x.price,0)}
+function removeItem(i){cart.splice(i,1);render()}
+function openCart(){document.getElementById('overlay').style.display='block';render()}
+function closeCart(){document.getElementById('overlay').style.display='none'}
+async function pay(){
+ if(!cart.length){msg('Add a bundle first.');return}
+ const email=document.getElementById('email').value, phone=document.getElementById('phone').value, provider=document.getElementById('payNetwork').value;
+ if(!email||!phone){msg('Enter your email and recipient phone number.');return}
+ msg('Starting secure payment…');
+ try{
+  const r=await fetch('/api/initialize',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,phone,provider,items:cart})});
+  const d=await r.json();
+  if(!r.ok) throw new Error(d.error||'Unable to start payment');
+  if(d.authorization_url) location.href=d.authorization_url;
+  else throw new Error('No checkout URL returned');
+ }catch(e){msg(e.message)}
+}
+function msg(x){document.getElementById('msg').textContent=x}
+render();
+</script>
+</body></html>
